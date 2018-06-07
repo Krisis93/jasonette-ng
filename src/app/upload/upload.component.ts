@@ -11,9 +11,21 @@ import { stringify } from 'querystring';
 })
 export class UploadComponent implements OnInit {
 
-  
+  carName: any;
+  fullName: any;
+  year: any;
+  engine: any;
+  color: any;
+  price: any;
+  imgSrc: any;
+  carLocation: any;
+
+
+
   newCar = allCars;
   //myCar = Cars;
+
+
 
   constructor() { 
     

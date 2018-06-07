@@ -11,7 +11,8 @@ import { FormattedMessageChain } from '@angular/compiler';
 })
 export class CarListComponent implements OnInit {
 
-  
+  branding: any;
+  colorr: any;
   cars = allCars;
   selectedCar: Cars;
 
