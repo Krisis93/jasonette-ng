@@ -1,0 +1,77 @@
+<div class="col-md-12">
+  <form #myForm="ngForm" (ngSubmit)="saveCar(myForm)" ngNativeValidate> 
+    <div class="form-group">
+      <label for="carName">Brand name</label>
+      <input type="text" id="userCarName" name="carName" required [(ngModel)]="carName" #userCarName="ngModel"  placeholder="Volvo,Mazda...">
+      <div *ngIf="userCarName.errors && (userCarName.dirty || userCarName.touched)" class="false">
+        <div [hidden]="!userCarName.errors.required">
+          Brand name is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fullName">Full name</label>
+      <input type="text" id="userFullName" name="fullName" required [(ngModel)]="fullName" #userFullName="ngModel" placeholder="Volvo XC60, AUDI RS4..." autocomplete="new-password">
+      <div *ngIf="userFullName.errors && (userFullName.dirty || userFullName.touched)" class="false">
+        <div [hidden]="!userFullName.errors.required">
+          Full name is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="number" id="userYear" name="year" required [(ngModel)]="year" #userYear="ngModel" placeholder="2000,1890,2018..." autocomplete="new-password">
+      <div *ngIf="userYear.errors && (userYear.dirty || userYear.touched)" class="false">
+        <div [hidden]="!userYear.errors.required">
+          Cars year is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="engineType">Engine Type</label>
+      <input type="text" id="userEngineType" name="engine" required [(ngModel)]="engine" #userEngineType="ngModel" placeholder="Diesel,Hybrid,Petrol,Gas" autocomplete="new-password">
+      <div *ngIf="userEngineType.errors && (userEngineType.dirty || userEngineType.touched)" class="false">
+        <div [hidden]="!userEngineType.errors.required">
+          Engine type is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="color">Color</label>
+      <input type="text" id="userColor" name="color" required [(ngModel)]="color" #userColor="ngModel" placeholder="Black,Yellow,Red..." autocomplete="new-password">
+      <div *ngIf="userColor.errors && (userColor.dirty || userColor.touched)" class="false">
+        <div [hidden]="!userColor.errors.required">
+          Cars color is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="userPrice" name="price" required [(ngModel)]="price" #userPrice="ngModel" placeholder="12000,1892,8999..." autocomplete="new-password">
+      <div *ngIf="userPrice.errors && (userPrice.dirty || userPrice.touched)" class="false">
+        <div [hidden]="!userPrice.errors.required">
+          Cars price is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="imgSrc">Url of picture</label>
+      <input type="text" id="userimgSrc" name="imgSrc" pattern="https?://.+" [(ngModel)]="imgSrc" #userimgSrc="ngModel" placeholder="http://...." autocomplete="new-password">
+      <div *ngIf="userimgSrc.errors && (userimgSrc.dirty || userimgSrc.touched)" class="false">
+        <div [hidden]="!userimgSrc.errors.pattern">
+          Cars Image URL!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="carLocation">Url of picture</label>
+        <input type="text" id="usercarLocation" name="carLocation" required [(ngModel)]="carLocation" #usercarLocation="ngModel" placeholder="Valka, Valmiera, Roja..." autocomplete="new-password">
+        <div *ngIf="usercarLocation.errors && (usercarLocation.dirty || usercarLocation.touched)" class="false">
+          <div [hidden]="!usercarLocation.errors.pattern">
+            Cars location!
+          </div>
+        </div>
+      </div>
+    <button type="submit">Save your car</button>
+  </form>
+</div>

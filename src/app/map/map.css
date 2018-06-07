@@ -1,0 +1,28 @@
+agm-map{
+  height: 600px;
+}
+.map{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+h2{
+  letter-spacing: 1.5px;
+}
+img{
+  width: 175px;
+  height: 100px;
+  border: 1px solid #333333;
+}
+.map-car{
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+  font-size: 14pt;
+}
+.map-price{
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 12pt;
+}
+.agm-info-window{
+  text-align: center;
+}

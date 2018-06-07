@@ -1,0 +1,32 @@
+[
+  {
+    "car-name": "Audi",
+    "color": "Black",
+    "price": 15000,
+    "img": "https://smgmedia.blob.core.windows.net/images/114002/1024/audi-rs6-rs6-avant-performance-estate-petrol_36560878.jpg"
+  },
+  {
+    "car-name": "BMW",
+    "color": "White",
+    "price": 23000,
+    "img": "http://cdn.bmwblog.com/wp-content/uploads/BMW-M5-F10-Frozen-White-Individual-2012-071.jpg"
+  },
+  {
+    "car-name": "Volkswagen",
+    "color": "Red",
+    "price": 13043,
+    "img": "http://www.seriouswheels.com/pics-2000-2003/2000-VW-New-Beetle-Red-Rear-1280x960.jpg"
+  },
+  {
+    "car-name": "Mercedes",
+    "color": "Grey",
+    "price": 32000,
+    "img": "http://4.bp.blogspot.com/-veQXx7LyO3o/UBgRUG0FroI/AAAAAAAAAME/hfAmVmyHw4g/s1600/Rev1.jpg"
+  },
+  {
+    "car-name": "Volvo",
+    "color": "Blue",
+    "price": 45000,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSTLGr2Rush_sR2Rrrpvm5omdkoMZtxOyzZVleW5Um0djDeyWY0g"
+  }
+]

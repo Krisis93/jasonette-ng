@@ -1,0 +1,12 @@
+<div class="col-md-12 map">
+  <agm-map [latitude]="latitude" [longitude]="longitude">
+    <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng">
+        <agm-info-window>  
+            <h2 class="map-head">{{ m.city }}</h2>
+            <img src="{{m.imgSrc}}" alt="{{m.carName}}"><br>
+            <span class="map-car">{{ m.fullName }}</span><br>
+            <span class="map-price">{{ m.price }} EUR</span>
+        </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>

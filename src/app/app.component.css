@@ -1,0 +1,29 @@
+/* Styling */
+.navy{
+  text-align: center;
+  background-color: #332619;
+  opacity: 0.7;
+  height: 50px;
+  transition: ease-in-out 0.1s;
+}
+.navy:hover{
+  background-color: #9ACD32;
+  transition: ease-in-out 0.1s;
+}
+.navy:focus{
+  background-color: #9ACD32;
+  transition: ease-in-out 0.1s;
+}
+.navy>a{
+  display: block;
+  color: #fff;
+  margin-top: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.navy>a:hover{
+  text-decoration: none;
+}
+.active{
+  background-color: #9ACD32;
+}

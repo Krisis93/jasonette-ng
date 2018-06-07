@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-12 centered">
+    <button (click)="onFilter()" id="filterBtn" class="fclassBtn">
+        <img src="../assets/images/arrow-down.png" alt="filterIt" id="btnImgFilter">
+    </button>
+    <button (click)="noFilter()" id="nofilterBtn" class="fclassBtn">
+        <img src="../assets/images/arrow-up.png" alt="filterNo" id="btnImgNoFilter">
+    </button>
+  </div>
+  <div class="col-md-12 filter">
+    <form id="filterCars">
+      <div class="form-group">
+        <label for="branding">Brand name</label>
+        <input type="text" [(ngModel)]="branding" name="branding" id="branding" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="engineType">Color</label>
+        <input type="text" [(ngModel)]="colorr" name="colorr" id="colorr" class="form-control">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <ul class="cars">
+    <li *ngFor="let car of cars | uselessPipe: branding:colorr " (click)="onSelect(car)" [class.selected]="car === selectedCar" class="thecar">
+        <div id="car">
+          <img src="{{car.imgSrc}}" alt="{{car.carName}}">
+        </div>
+        <div class="infoback">
+          <p id="brand" class="info">{{car.carName}}</p>
+          <p id="color" class="info">{{car.color}}</p>
+          <p id="price" class="info">{{car.price}}$</p>
+        </div>
+    </li>
+  </ul>
+  <div *ngIf="selectedCar">
+    <div id="background"></div>
+    <div id="pop-up">
+      <span id="exit" (click)="onDeselect(selectedCar)">X</span>
+      <div id="car">
+        <img src="{{selectedCar.imgSrc}}" alt="{{selectedCar.carName}}">
+      </div>
+      <p id="brand" class="full info">Brand : {{selectedCar.fullName}}</p>
+      <p id="color" class="full info">Color : {{selectedCar.color}}</p>
+      <p id="year" class="full info">Year : {{selectedCar.year}}</p>
+      <p id="engine" class="full info">Engine type : {{selectedCar.engine}}</p>
+      <p id="price" class="full sinfo">Price : {{selectedCar.price}}$</p>
+    </div>
+  </div>
+
+</div>
+
